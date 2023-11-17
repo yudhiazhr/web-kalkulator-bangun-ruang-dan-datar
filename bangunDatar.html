@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangun Datar</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/bangun.css" />
+
+    <!-- JS -->
+    <script src="js/bangunDatar/persegi.js"></script>
+    <script src="js/bangunDatar/persegiPanjang.js"></script>
+    <script src="js/bangunDatar/jajarGenjang.js"></script>
+    <script src="js/bangunDatar/segitiga.js"></script>
+    <script src="js/bangunDatar/ketupat.js"></script>
+    <script src="js/bangunDatar/layang.js"></script>
+    <script src="js/bangunDatar/lingkaran.js"></script>
+    <script src="js/bangunDatar/trapesium.js"></script>
+
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="index.html"
+        ><img
+          src="https://media-exp1.licdn.com/dms/image/C4E0BAQHmzL8S8iaTWw/company-logo_200_200/0/1617296482466?e=2159024400&v=beta&t=px0SGLf_8WugzExJDj6xru3K0c-5C0YaYbPdWDCyurE"
+          class="logo"
+      /></a>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="index.html">Menu</a></li>
+      </ul>
+    </div>
+    <!-- Navbar end -->
+
+    <!-- home/hero -->
+    <section id="home" class="home">
+      <div class="circleTop"></div>
+      <div class="circleBottom"></div>
+      <div class="circleBottom2"></div>
+      <div class="circleBottom3"></div>
+
+
+      <div class="wrapper">
+        <h1>Hitung Luas & Keliling Bangun Datar</h1>
+        <div class="container">
+
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Persegi</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="persegi_luas" id="persegi_luas"/>
+                  
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="persegi_keliling" id="persegi_keliling"/>
+                  
+                  <label>MASUKKAN SISI PERSEGI</label>
+                  <input type="number" name="persegi_sisi" class="form-control" id="persegi_sisi"/>
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungKelilingLuasPersegi()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormPersegi()" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Persegi Panjang</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="pp_luas"  id="pp_luas">
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="pp_keliling" id="pp_keliling">
+                  <label>MASUKKAN PANJANG</label>
+                  <input type="number" name="pp_panjang" class="form-control" id="pp_panjang">
+                  <label>MASUKKAN LEBAR</label>
+                  <input type="number" name="pp_lebar" class="form-control" id="pp_lebar">
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungLuasKelilingPersegiPanjang()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormPersegiPanjang()" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Jajar Genjang</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="jg_luas"  id="jg_luas">
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="jg_keliling" id="jg_keliling">
+                  <label>MASUKKAN ALAS</label>
+                  <input type="number" name="jg_alas" class="form-control" id="jg_alas">
+                  <label>MASUKKAN TINGGI</label>
+                  <input type="number" name="jg_tinggi" class="form-control" id="jg_tinggi">
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungLuasKelilingJajarGenjang()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormJajarGenjang()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Segitiga</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="segi3_luas"  id="segi3_luas">
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="segi3_keliling" id="segi3_keliling">
+                  <label>MASUKKAN TINGGI</label>
+                  <input type="number" name="segi3_tinggi" class="form-control" id="segi3_tinggi">
+                  <label>MASUKKAN ALAS</label>
+                  <input type="number" name="segi3_alas" class="form-control" id="segi3_alas">
+                  <label>MASUKKAN SISI KIRI</label>
+                  <input type="number" name="segi3_sisi1" class="form-control" id="segi3_sisi1">
+                  <label>MASUKKAN SISI KANAN</label>
+                  <input type="number" name="segi3_sisi2" class="form-control" id="segi3_sisi2">
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungLuasKelilingSegitiga()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormSegitiga()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Belah Ketupat</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="ketupat_luas"  id="ketupat_luas">
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="ketupat_keliling" id="ketupat_keliling">
+                  <label>MASUKKAN DIAGONAL 1</label>
+                  <input type="number" name="ketupat_d1" class="form-control" id="ketupat_d1">
+                  <label>MASUKKAN DIAGONAL 2</label>
+                  <input type="number" name="ketupat_d2" class="form-control" id="ketupat_d2">
+                  <label>MASUKKAN SISI</label>
+                  <input type="number" name="ketupat_sisi" class="form-control" id="ketupat_sisi">
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungLuasKelilingBelahKetupat()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormBelahKetupat()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Layang-layang</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="layang_luas"  id="layang_luas">
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="layang_keliling" id="layang_keliling">
+                  <label>MASUKKAN DIAGONAL 1</label>
+                  <input type="number" name="layang_d1" class="form-control" id="layang_d1">
+                  <label>MASUKKAN DIAGONAL 2</label>
+                  <input type="number" name="layang_d2" class="form-control" id="layang_d2">
+                  <label>MASUKKAN SISI 1</label>
+                  <input type="number" name="layang_sisi1" class="form-control" id="layang_sisi1">
+                  <label>MASUKKAN SISI 2</label>
+                  <input type="number" name="layang_sisi2" class="form-control" id="layang_sisi2">
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungLuasKelilingLayang()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormLayang()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Lingkaran</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="lingkaran_luas"  id="lingkaran_luas">
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="lingkaran_keliling" id="lingkaran_keliling">
+                  <label>MASUKKAN JARI JARI</label>
+                  <input type="number" name="lingkaran_jari" class="form-control" id="lingkaran_jari">
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungLuasKelilingLingkaran()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormLingkaran()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p class="title">Trapesium</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="form-group">
+                  <label>HASIL LUAS</label>
+                  <input type="number" disabled class="form-control" name="trapesium_luas"  id="trapesium_luas">
+                  <label>HASIL KELILING</label>
+                  <input type="number" disabled class="form-control" name="trapesium_keliling" id="trapesium_keliling">
+                  <label>MASUKKAN TINGGI</label>
+                  <input type="number" name="trapesium_tinggi" class="form-control" id="trapesium_tinggi">
+                  <label>MASUKKAN ALAS</label>
+                  <input type="number" name="trapesium_alas" class="form-control" id="trapesium_alas">
+                  <label>MASUKKAN SISI ATAS</label>
+                  <input type="number" name="trapesium_sisi3" class="form-control" id="trapesium_sisi3">
+                  <label>MASUKKAN SISI KIRI</label>
+                  <input type="number" name="trapesium_sisi1" class="form-control" id="trapesium_sisi1">
+                  <label>MASUKKAN SISI KANAN</label>
+                  <input type="number" name="trapesium_sisi2" class="form-control" id="trapesium_sisi2">
+                </div>
+                <div class="button-row">
+                  <input type="button" value="Hitung" class="btn" onclick="hitungLuasKelilingTrapesium()" />
+                  <input type="reset" value="Reset" class="btn" onclick="resetFormTrapesium()" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- home/hero-end -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="contact">
+          <h4>Contact Us</h4>
+          <p>Email: m.yudhiazhari@email.com</p>
+          <p>Phone: +62 857-1002-1107</p>
+      </div>
+      <div class="website-info">
+          <h4>Website Information</h4>
+          <p>Copyright © 2023 Your Website Name</p>
+          <p>Address: 123 Main Street, Cityville</p>
+      </div>
+  </footer>
+    <!-- Footer-end -->
+  </body>
+</html>
